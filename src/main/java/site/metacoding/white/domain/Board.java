@@ -14,9 +14,11 @@ import lombok.Setter;
 @Entity
 public class Board {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 해당 데이터 전략 따라감.
     private Long id;
     private String title;
     @Column(length = 1000)
     private String content;
+    private String author;
+
 }
